@@ -7,6 +7,8 @@ player.on('play', function() {
 
 
 player.on('pause', function(data) {
+    let update = document.getElementById('playing');
+    update.value = 'Pausado en: ' + Math.floor(data.percent * 100) + '%';
     console.log('pausado en: ' + Math.floor(data.percent * 100) + '% - ' + data.seconds + 'segundos' );
 });
 
@@ -20,6 +22,10 @@ player.on('loaded', function(data) {
     });
 });
 
+player.on('timeupdate', function(data){
+    let update = document.getElementById('playing');
+    update.value = 'Reproduciendo: ' + Math.floor(data.percent * 100) + '%';
+})
 
 player.on('ended', ()=>{completado()})
 
