@@ -10,19 +10,16 @@ player.on('pause', function(data) {
     console.log('pausado en: ' + Math.floor(data.percent * 100) + '% - ' + data.seconds + 'segundos' );
 });
 
-player.on('load', function(data) {
+player.on('loaded', function(data) {
     player.getVideoEmbedCode().then(function(embedCode) {
         if(localStorage.getItem(embedCode) && localStorage.getItem(embedCode) === 'ended') ; 
         document.getElementById('state').innerHTML = '<i style="color:hsl(116, 68%, 61%)" class="fa-solid fa-circle-check"></i>';
+        console.log('ended');
     }).catch(function(error) {
         console.log(error);
     });
 });
 
-
-player.getVideoTitle().then(function(title) {
-    console.log('titulo:', title);
-});
 
 player.on('ended', ()=>{completado()})
 
