@@ -10,9 +10,15 @@
   </head>
   <body>
     <main>
+      <ul>
+        <li><button onclick="loadvideo(632060933)">Test Recording</button></li>
+        <li><button onclick="loadvideo(686417852)" >Recording Max</button></li>
+
+        
+      </ul>
       <div class="player">
         <div style="padding: 56.25% 0 0 0; position: relative">
-          <iframe
+          <iframe id="iframevimeo" name="iframevimeo"
             src="https://player.vimeo.com/video/686417852?h=17f1f016ce&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
             frameborder="0"
             allow="autoplay; fullscreen; picture-in-picture"
@@ -30,6 +36,9 @@
         <script src="https://player.vimeo.com/api/player.js"></script>
       </div>
       <div class="controls">
+        <div>
+          <h2 id="vimeotitle">titulo</h2>
+        </div>
           <div id="state" class="state">
             <i style="color: hsl(0, 90%, 49%);"class="fa-solid fa-circle-xmark"></i>
           </div>
@@ -45,18 +54,6 @@
           <button >Reproduciendo</button
           ><input id="playing" type="text" class="btncontrol" />
         </div>
-        <!-- <div class="control">
-          <button onclick="xxxxxx()">accion_004</button
-          ><input type="text" class="btncontrol" />
-        </div>
-        <div class="control">
-          <button onclick="xxxxxx()">accion_005</button
-          ><input type="text" class="btncontrol" />
-        </div>
-        <div class="control">
-          <button onclick="xxxxxx()">accion_006</button
-          ><input type="text" class="btncontrol" />
-        </div> -->
       </div>
     </main>
     <script src="player.js"></script>

@@ -3,6 +3,10 @@ const player = new Vimeo.Player(iframe);
 
 player.on('play', function() {
     console.log('reproduciendo');
+    player.getVideoTitle().then((title) => {
+        let titulo = document.getElementById('vimeotitle');
+        titulo.innerHTML = title;
+    })
 });
 
 
@@ -20,6 +24,10 @@ player.on('loaded', function(data) {
     }).catch(function(error) {
         console.log(error);
     });
+    player.getVideoTitle().then((title) => {
+        let titulo = document.getElementById('vimeotitle');
+        titulo.innerHTML = title;
+    })
 });
 
 player.on('timeupdate', function(data){
@@ -54,4 +62,8 @@ function completado(){
         console.log(error);
     });
   document.getElementById('state').innerHTML = '<i style="color:hsl(116, 68%, 61%)" class="fa-solid fa-circle-check"></i>';
+}
+
+function loadvideo(id){
+    player.loadVideo(id);
 }
