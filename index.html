@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Player</title>
+    <link rel="stylesheet" href="player.css" />
+    <script src="https://kit.fontawesome.com/1f0095e90c.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <main>
+      <div class="player">
+        <div style="padding: 56.25% 0 0 0; position: relative">
+          <iframe
+            src="https://player.vimeo.com/video/686417852?h=17f1f016ce&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen
+            style="
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+            "
+            title="New Recording - 9/3/2022, 16:42:04"
+          ></iframe>
+        </div>
+        <script src="https://player.vimeo.com/api/player.js"></script>
+      </div>
+      <div class="controls">
+          <div id="state" class="state">
+            <i style="color: hsl(0, 90%, 49%);"class="fa-solid fa-circle-xmark"></i>
+          </div>
+        <div class="control">
+          <button onclick="playevideo()">PlayVideo</button>
+          <input type="text" id="playedAt" />
+        </div>
+        <div class="control">
+          <button onclick="pausevideo()">Pause Video</button
+          ><input type="text" id="pausedAt" />
+        </div>
+        <div class="control">
+          <button onclick="forwardvideo(100)">Forward</button
+          ><input type="text" class="btncontrol" />
+        </div>
+        <!-- <div class="control">
+          <button onclick="xxxxxx()">accion_004</button
+          ><input type="text" class="btncontrol" />
+        </div>
+        <div class="control">
+          <button onclick="xxxxxx()">accion_005</button
+          ><input type="text" class="btncontrol" />
+        </div>
+        <div class="control">
+          <button onclick="xxxxxx()">accion_006</button
+          ><input type="text" class="btncontrol" />
+        </div> -->
+      </div>
+    </main>
+    <script src="player.js"></script>
+  </body>
+</html>
